@@ -1,0 +1,54 @@
+<div className="mt-6 flex items-center rounded-xl border border-white/10 bg-[#321c7c] px-3 py-3">
+              {/* Play */}
+              <div className="flex items-center gap-3">
+                <img
+                  src={play}
+                  alt="Play"
+                  className="h-12 w-12 object-contain"
+                />
+
+                <div>
+                  <h3 className="text-[13px] font-semibold">Play Quiz</h3>
+
+                  <p className="text-[12px] text-gray-300">
+                    Challenge yourself
+                  </p>
+                </div>
+              </div>
+              <div className="h-14 w-[1px] bg-gray-600"></div>
+
+              {/* Earn */}
+              <div className="flex items-center gap-3  ">
+                <img
+                  src={earn}
+                  alt="Earn"
+                  className="h-12 w-12 object-contain"
+                />
+
+                <div>
+                  <h3 className="text-[13px] font-semibold">Earn Points</h3>
+
+                  <p className="text-[12px] text-gray-300">
+                    Score high & earn points
+                  </p>
+                </div>
+              </div>
+              <div className="h-14 w-[1px] bg-gray-600"></div>
+
+              {/* Unlock */}
+              <div className="flex items-center gap-3 ">
+                <img
+                  src={unlock}
+                  alt="Unlock"
+                  className="h-12 w-12 object-contain"
+                />
+
+                <div>
+                  <h3 className="text-[13px] font-semibold">Unlock Rewards</h3>
+
+                  <p className="text-[12px] text-gray-300">
+                    Get discounts on books
+                  </p>
+                </div>
+              </div>
+            </div>
