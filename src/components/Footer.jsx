@@ -1,16 +1,20 @@
 import React from "react";
 import { Mail } from "lucide-react";
+import brandlogo from "../assets/brandlogo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0B1120] pt-2 pb-1 text-white text-sm">
+    <footer
+      id="contactus"
+      className="bg-[#0B1120] pt-2 pb-1 text-white text-sm"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-2">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-1">
-              <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-primary font-bold text-xl">
-                M
+              <div className="w-10 h-10  flex items-center justify-center ">
+                <img src={brandlogo} alt="brandlogo" className="rounded-full" />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">

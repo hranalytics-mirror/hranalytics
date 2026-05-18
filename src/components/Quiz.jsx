@@ -7,7 +7,10 @@ import discount from "../assets/discount.png";
 
 const Quiz = () => {
   return (
-    <div className="max-w-7xl mx-auto  rounded-2xl bg-[#16005B] px-8 py-2 text-white shadow-xl">
+    <div
+      id="quiz"
+      className="max-w-7xl mx-auto  rounded-2xl bg-[#16005B] px-8 py-2 text-white shadow-xl"
+    >
       <div className="flex items-center justify-between gap-6">
         {/* LEFT SECTION */}
         <div className="flex items-center gap-6">

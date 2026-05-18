@@ -24,7 +24,7 @@ const blogs = [
 
 const Blog = () => {
   return (
-    <div className="max-w-7xl mx-auto my-5">
+    <div id="insights" className="max-w-7xl mx-auto my-5">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-800 tracking-wide uppercase text-center flex-1">
           LATEST INSIGHTS& STORIES

@@ -1,5 +1,6 @@
 import React from "react";
-import { Mail, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Mail, Linkedin, Instagram, Youtube, Twitter, X } from "lucide-react";
+import xLogo from "../assets/x.svg";
 
 const NewsletterSection = () => {
   return (
@@ -49,9 +50,9 @@ const NewsletterSection = () => {
           </a>
           <a
             href="#"
-            className="w-8 h-8 bg-red-600 rounded flex items-center justify-center text-white hover:bg-red-700 transition"
+            className="w-8 h-8  rounded flex items-center justify-center text-white hover:bg-red-700 transition"
           >
-            <Youtube size={16} />
+            <img src={xLogo} alt="" />
           </a>
           <a
             href="#"

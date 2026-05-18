@@ -40,6 +40,7 @@ const reviews = [
 const Review = () => {
   return (
     <div
+      id="reviews"
       className="relative   overflow-hidden rounded-xl bg-cover bg-center py-2 max-w-[1500px] mx-auto"
       style={{
         backgroundImage: `url(${reviewBg})`,

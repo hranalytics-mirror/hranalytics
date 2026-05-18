@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/carousel";
 
 import amazonLogo from "../assets/amazon.svg";
+import kindleLogo from "../assets/kindle.svg";
+import ziffybeeLogo from "../assets/ziffy.svg";
 
 // Different book images
 import book1 from "../assets/book1.png";
@@ -15,6 +17,7 @@ import book2 from "../assets/book2.png";
 import book3 from "../assets/book3.png";
 import book4 from "../assets/book4.png";
 import book5 from "../assets/book5.png";
+import { Link } from "react-router-dom";
 
 const books = [
   {
@@ -52,18 +55,14 @@ const books = [
     desc: "Modern strategies for teams.",
     color: "bg-[#DC2626]",
   },
-  {
-    id: 6,
-    image: book5,
-    volume: "Volume 5",
-    desc: "Modern strategies for teams.",
-    color: "bg-[#DC2626]",
-  },
 ];
 
 const BookCard = ({ book }) => {
   return (
-    <div className="w-full rounded-2xl border border-gray-300 bg-gray-100 p-2 shadow-sm">
+    <div
+      id="books"
+      className="w-full rounded-2xl border border-gray-300 bg-gray-100 p-2 shadow-sm"
+    >
       {/* Top */}
       <div className="flex justify-center gap-4">
         {/* Book Image */}
@@ -85,21 +84,25 @@ const BookCard = ({ book }) => {
             </p>
           </div>
 
-          <button
-            className={`w-fit rounded-md px-2 py-2 text-[12px] font-semibold text-white ${book.color}`}
-          >
-            BUY NOW
-          </button>
+          <Link to={`/book/${book.id}`}>
+            <button
+              className={`w-fit rounded-md px-2 py-2 text-[12px] font-semibold text-white ${book.color}`}
+            >
+              BUY NOW
+            </button>
+          </Link>
         </div>
       </div>
 
       {/* Bottom */}
       <div className="mt-5 flex items-center justify-center gap-4">
-        <img src={amazonLogo} alt="Amazon" className="h-5 w-auto" />
+        <img src={amazonLogo} alt="Amazon" className="h-4 w-auto" />
 
         <div className="h-4 w-[1px] bg-gray-400"></div>
 
-        <span className="text-sm font-bold text-[#1B1464]">ZiffyBees</span>
+        <img src={kindleLogo} alt="Amazon" className="h-5 w-auto" />
+        <div className="h-4 w-[1px] bg-gray-400"></div>
+        <img src={ziffybeeLogo} alt="Amazon" className="h-5 w-auto" />
       </div>
     </div>
   );

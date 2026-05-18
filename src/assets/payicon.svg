@@ -1,0 +1,35 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC400"/>
+      <stop offset="1" stop-color="#F2B300"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#bg)"/>
+
+  <!-- Rupee circle -->
+  <circle cx="64" cy="64" r="28" stroke="white" stroke-width="5"/>
+
+  <!-- Rupee symbol -->
+  <path d="M54 48H76"
+        stroke="white"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <path d="M54 58H72"
+        stroke="white"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <path d="M55 48C64 48 68 52 68 58C68 64 63 68 56 68H54"
+        stroke="white"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <path d="M58 68L74 84"
+        stroke="white"
+        stroke-width="5"
+        stroke-linecap="round"/>
+</svg>
