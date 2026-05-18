@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail } from "lucide-react";
-import brandlogo from "../assets/brandlogo.png";
+import brandlogo from "../assets/brandLogo.png";
 
 const Footer = () => {
   return (
