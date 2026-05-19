@@ -95,22 +95,8 @@ const Footer = () => {
                     Reviews
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/author"
-                    className="text-gray-400 hover:text-white transition text-xs"
-                  >
-                    About Authors
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contactus"
-                    className="text-gray-400 hover:text-white transition text-xs"
-                  >
-                    Contact
-                  </a>
-                </li>
+                <li></li>
+                <li></li>
               </ul>
               {/* <ul className="">
                 <li>
