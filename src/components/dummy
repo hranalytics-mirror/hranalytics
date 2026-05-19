@@ -1,54 +1,185 @@
-<div className="mt-6 flex items-center rounded-xl border border-white/10 bg-[#321c7c] px-3 py-3">
-              {/* Play */}
-              <div className="flex items-center gap-3">
-                <img
-                  src={play}
-                  alt="Play"
-                  className="h-12 w-12 object-contain"
-                />
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import brandlogo from "../assets/brandLogo.png";
 
-                <div>
-                  <h3 className="text-[13px] font-semibold">Play Quiz</h3>
+const NavbarSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-                  <p className="text-[12px] text-gray-300">
-                    Challenge yourself
-                  </p>
-                </div>
+  return (
+    <nav className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link to={"/"}>
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img src={brandlogo} alt="brandlogo" className="rounded-full" />
               </div>
-              <div className="h-14 w-[1px] bg-gray-600"></div>
 
-              {/* Earn */}
-              <div className="flex items-center gap-3  ">
-                <img
-                  src={earn}
-                  alt="Earn"
-                  className="h-12 w-12 object-contain"
-                />
+              <div className="flex flex-col">
+                <span className="font-bold text-base sm:text-lg text-blue-950 leading-tight">
+                  HR MIRROR 500
+                </span>
 
-                <div>
-                  <h3 className="text-[13px] font-semibold">Earn Points</h3>
-
-                  <p className="text-[12px] text-gray-300">
-                    Score high & earn points
-                  </p>
-                </div>
-              </div>
-              <div className="h-14 w-[1px] bg-gray-600"></div>
-
-              {/* Unlock */}
-              <div className="flex items-center gap-3 ">
-                <img
-                  src={unlock}
-                  alt="Unlock"
-                  className="h-12 w-12 object-contain"
-                />
-
-                <div>
-                  <h3 className="text-[13px] font-semibold">Unlock Rewards</h3>
-
-                  <p className="text-[12px] text-gray-300">
-                    Get discounts on books
-                  </p>
-                </div>
+                <span className="text-[10px] sm:text-xs text-gray-500 font-medium">
+                  Stories HR is Missing
+                </span>
               </div>
             </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex space-x-6 lg:items-center">
+            <Link
+              to={"/"}
+              className="text-secondary font-medium text-sm hover:text-pink-700 transition"
+            >
+              Home
+            </Link>
+
+            <a
+              href="#books"
+              className="text-gray-600 hover:text-primary font-medium text-sm transition"
+            >
+              Books
+            </a>
+
+            <a
+              href="#assessments"
+              className="text-gray-600 hover:text-primary font-medium text-sm transition"
+            >
+              Tools & Assessments
+            </a>
+
+            <div className="relative">
+              <a
+                href="#quiz"
+                className="text-gray-600 hover:text-primary font-medium text-sm transition"
+              >
+                Quiz Arena
+              </a>
+
+              <span className="absolute -top-3 -right-6 bg-accent text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                NEW
+              </span>
+            </div>
+
+            <a
+              href="#reviews"
+              className="text-gray-600 hover:text-primary font-medium text-sm transition"
+            >
+              Reviews
+            </a>
+
+            <Link
+              to={"/author"}
+              className="text-gray-600 hover:text-primary font-medium text-sm transition"
+            >
+              About Authors
+            </Link>
+
+            <a
+              href="https://talent-synergy.com/contact-us"
+              className="text-gray-600 hover:text-primary font-medium text-sm transition"
+            >
+              Contact Us
+            </a>
+          </div>
+
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex">
+            <button className="bg-secondary hover:bg-pink-700 text-white px-2 py-2 rounded-md font-medium text-sm shadow-md shadow-pink-200 transition-all">
+              Grab Your Book RN
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-700"
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+            isOpen ? "max-h-[500px] pb-6" : "max-h-0"
+          }`}
+        >
+          <div className="flex flex-col gap-5 pt-4 border-t border-gray-100">
+            <Link
+              to={"/"}
+              onClick={() => setIsOpen(false)}
+              className="text-secondary font-medium text-sm"
+            >
+              Home
+            </Link>
+
+            <a
+              href="#books"
+              onClick={() => setIsOpen(false)}
+              className="text-gray-600 font-medium text-sm"
+            >
+              Books
+            </a>
+
+            <a
+              href="#assessments"
+              onClick={() => setIsOpen(false)}
+              className="text-gray-600 font-medium text-sm"
+            >
+              Tools & Assessments
+            </a>
+
+            <div className="flex items-center gap-2">
+              <a
+                href="#quiz"
+                onClick={() => setIsOpen(false)}
+                className="text-gray-600 font-medium text-sm"
+              >
+                Quiz Arena
+              </a>
+
+              <span className="bg-accent text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                NEW
+              </span>
+            </div>
+
+            <a
+              href="#reviews"
+              onClick={() => setIsOpen(false)}
+              className="text-gray-600 font-medium text-sm"
+            >
+              Reviews
+            </a>
+
+            <Link
+              to={"/author"}
+              onClick={() => setIsOpen(false)}
+              className="text-gray-600 font-medium text-sm"
+            >
+              About Authors
+            </Link>
+
+            <a
+              href="#contactus"
+              onClick={() => setIsOpen(false)}
+              className="text-gray-600 font-medium text-sm"
+            >
+              Contact
+            </a>
+
+            <button className="bg-secondary hover:bg-pink-700 text-white rounded-md px-6  py-3 font-medium text-sm shadow-md shadow-pink-200 transition-all w-full">
+              Grab Your Book RN
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default NavbarSection;

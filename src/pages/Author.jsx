@@ -1,66 +1,160 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import prarthana from "../assets/prathana.png";
 import abhi from "../assets/abhi.png";
 
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 const Author = () => {
   return (
-    <div className="bg-[#f7f8fc] min-h-screen">
+    <div className="min-h-screen bg-[#f7f8fc] overflow-hidden">
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 py-10 md:py-16">
-        <div className="text-center">
-          <div className="inline-flex bg-pink-100 text-pink-600 px-5 py-2 rounded-full text-sm font-semibold">
+      <section className="mx-auto max-w-7xl px-4 py-10 md:px-8 md:py-16">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.12 }}
+          className="text-center"
+        >
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.5 }}
+            className="
+              inline-flex
+              rounded-full
+              bg-pink-100
+              px-5
+              py-2
+              text-sm
+              font-semibold
+              text-pink-600
+            "
+          >
             About The Authors
-          </div>
+          </motion.div>
 
-          <h1 className="text-4xl md:text-6xl font-black text-[#101828] mt-6">
+          <motion.h1
+            variants={fadeUp}
+            transition={{ duration: 0.6 }}
+            className="
+              mt-6
+              text-4xl
+              font-black
+              text-[#101828]
+              md:text-6xl
+            "
+          >
             Meet The Minds Behind
             <br />
             HR Mirror 500
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-6 leading-relaxed">
+          <motion.p
+            variants={fadeUp}
+            transition={{ duration: 0.7 }}
+            className="
+              mx-auto
+              mt-6
+              max-w-3xl
+              text-lg
+              leading-relaxed
+              text-gray-600
+            "
+          >
             Experienced professionals combining HR, analytics, AI, workforce
             transformation, and strategic business insight.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* AUTHORS */}
-      <section className="max-w-7xl mx-auto px-4 md:px-8 pb-20 space-y-10">
+      <section className="mx-auto max-w-7xl space-y-10 px-4 pb-20 md:px-8">
         {/* AUTHOR 1 */}
-        <div className="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-10 items-center p-6 md:p-10">
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          whileHover={{ y: -4 }}
+          className="
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-gray-100
+            bg-white
+            shadow-sm
+          "
+        >
+          <div className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-2">
             {/* IMAGE */}
-            <div className="flex justify-center">
-              <img
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="flex justify-center"
+            >
+              <motion.img
+                whileHover={{
+                  scale: 1.03,
+                  rotate: -1,
+                }}
+                transition={{ duration: 0.3 }}
                 src={prarthana}
                 alt="Prarthana Karmakar"
                 className="
                   w-[280px]
-                  md:w-[400px]
                   rounded-[28px]
                   object-cover
                   shadow-2xl
+                  md:w-[400px]
                 "
               />
-            </div>
+            </motion.div>
 
             {/* CONTENT */}
-            <div>
-              <div className="inline-flex bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-semibold">
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.04 }}
+                className="
+                  inline-flex
+                  rounded-full
+                  bg-pink-100
+                  px-4
+                  py-2
+                  text-sm
+                  font-semibold
+                  text-pink-600
+                "
+              >
                 Author
-              </div>
+              </motion.div>
 
-              <h2 className="text-4xl font-black text-[#101828] mt-5">
+              <h2 className="mt-5 text-4xl font-black text-[#101828]">
                 Prarthana Karmakar
               </h2>
 
-              <p className="text-xl text-gray-600 mt-3">
+              <p className="mt-3 text-xl text-gray-600">
                 Senior Analyst – Analytics & AI Programs
               </p>
 
-              <div className="mt-8 space-y-5 text-gray-600 leading-8">
+              <div className="mt-8 space-y-5 leading-8 text-gray-600">
                 <p>
                   Prarthana Karmakar is an analytics professional and emerging
                   AI-driven HR strategist who transforms workforce data into
@@ -79,47 +173,84 @@ const Author = () => {
                 </p>
               </div>
 
-              <a
+              <motion.a
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                }}
+                whileTap={{ scale: 0.96 }}
                 href="https://www.linkedin.com/in/prarthana123/"
                 target="_blank"
                 rel="noreferrer"
                 className="
                   mt-8
                   inline-flex
+                  rounded-2xl
                   bg-[#0077b5]
-                  hover:opacity-90
-                  text-white
                   px-6
                   py-4
-                  rounded-2xl
                   font-semibold
+                  text-white
                   transition
+                  hover:opacity-90
                 "
               >
                 View LinkedIn
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* AUTHOR 2 */}
-        <div className="bg-white rounded-[32px] border border-gray-100 shadow-sm overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-10 items-center p-6 md:p-10">
+        <motion.div
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          whileHover={{ y: -4 }}
+          className="
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-gray-100
+            bg-white
+            shadow-sm
+          "
+        >
+          <div className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-2">
             {/* CONTENT */}
-            <div className="order-2 lg:order-1">
-              <div className="inline-flex bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="order-2 lg:order-1"
+            >
+              <motion.div
+                whileHover={{ scale: 1.04 }}
+                className="
+                  inline-flex
+                  rounded-full
+                  bg-blue-100
+                  px-4
+                  py-2
+                  text-sm
+                  font-semibold
+                  text-blue-600
+                "
+              >
                 Author
-              </div>
+              </motion.div>
 
-              <h2 className="text-4xl font-black text-[#101828] mt-5">
+              <h2 className="mt-5 text-4xl font-black text-[#101828]">
                 Abhinandan Mookherjee (Abhi)
               </h2>
 
-              <p className="text-xl text-gray-600 mt-3">
+              <p className="mt-3 text-xl text-gray-600">
                 Co-founder & Managing Director, Talent Synergy Solutions
               </p>
 
-              <div className="mt-8 space-y-5 text-gray-600 leading-8">
+              <div className="mt-8 space-y-5 leading-8 text-gray-600">
                 <p>
                   Abhinandan Mookherjee is a future-of-work strategist, HR
                   technologist, and people analytics evangelist with over 18
@@ -139,43 +270,59 @@ const Author = () => {
                 </p>
               </div>
 
-              <a
+              <motion.a
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                }}
+                whileTap={{ scale: 0.96 }}
                 href="https://www.linkedin.com/in/abhi2dot0/"
                 target="_blank"
                 rel="noreferrer"
                 className="
                   mt-8
                   inline-flex
+                  rounded-2xl
                   bg-[#0077b5]
-                  hover:opacity-90
-                  text-white
                   px-6
                   py-4
-                  rounded-2xl
                   font-semibold
+                  text-white
                   transition
+                  hover:opacity-90
                 "
               >
                 View LinkedIn
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
             {/* IMAGE */}
-            <div className="order-1 lg:order-2 flex justify-center">
-              <img
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="order-1 flex justify-center lg:order-2"
+            >
+              <motion.img
+                whileHover={{
+                  scale: 1.03,
+                  rotate: 1,
+                }}
+                transition={{ duration: 0.3 }}
                 src={abhi}
                 alt="Abhinandan Mookherjee"
                 className="
                   w-[280px]
-                  md:w-[400px]
                   rounded-[28px]
                   object-cover
                   shadow-2xl
+                  md:w-[400px]
                 "
               />
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );

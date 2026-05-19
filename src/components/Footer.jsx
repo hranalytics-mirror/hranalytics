@@ -1,6 +1,7 @@
 import React from "react";
 import { Mail } from "lucide-react";
 import brandlogo from "../assets/brandLogo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -48,64 +49,26 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#books"
                     className="text-gray-400 hover:text-white transition text-xs"
                   >
                     Books
                   </a>
                 </li>
                 <li>
-                  <a
+                  {/* <a
                     href="#"
                     className="text-gray-400 hover:text-white transition text-xs"
                   >
                     Insights
-                  </a>
+                  </a> */}
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="#quiz"
                     className="text-gray-400 hover:text-white transition text-xs"
                   >
                     Quiz Arena
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div className="h-8"></div> {/* Spacer for alignment */}
-              <ul className="">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition text-xs"
-                  >
-                    Tools& Assessments
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition text-xs"
-                  >
-                    Reviews
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition text-xs"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition text-xs"
-                  >
-                    Contact
                   </a>
                 </li>
               </ul>
@@ -116,6 +79,40 @@ const Footer = () => {
                 RESOURCES
               </h4>
               <ul className="">
+                <li>
+                  <a
+                    href="#assessments"
+                    className="text-gray-400 hover:text-white transition text-xs"
+                  >
+                    Tools& Assessments
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#reviews"
+                    className="text-gray-400 hover:text-white transition text-xs"
+                  >
+                    Reviews
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/author"
+                    className="text-gray-400 hover:text-white transition text-xs"
+                  >
+                    About Authors
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contactus"
+                    className="text-gray-400 hover:text-white transition text-xs"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+              {/* <ul className="">
                 <li>
                   <a
                     href="#"
@@ -148,7 +145,7 @@ const Footer = () => {
                     Sample Dashboards
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
 
@@ -162,35 +159,35 @@ const Footer = () => {
                 <ul className="">
                   <li>
                     <a
-                      href="#"
+                      href="https://talent-synergy.com/contact-us"
                       className="text-gray-400 hover:text-white transition text-xs"
                     >
-                      About Us
+                      Contact Us
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to={"/author"}
                       className="text-gray-400 hover:text-white transition text-xs"
                     >
                       Authors
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    {/* <a
                       href="#"
                       className="text-gray-400 hover:text-white transition text-xs"
                     >
                       Privacy Policy
-                    </a>
+                    </a> */}
                   </li>
                   <li>
-                    <a
+                    {/* <a
                       href="#"
                       className="text-gray-400 hover:text-white transition text-xs"
                     >
                       Terms& Conditions
-                    </a>
+                    </a> */}
                   </li>
                 </ul>
               </div>
@@ -209,9 +206,9 @@ const Footer = () => {
                 discover@talent-synergy.com
               </a>
             </div>
-            <button className="w-full bg-primary hover:bg-blue-600 text-white font-bold text-xs py-3 px-4 rounded-md transition shadow-md shadow-blue-500/20">
+            {/* <button className="w-full bg-primary hover:bg-blue-600 text-white font-bold text-xs py-3 px-4 rounded-md transition shadow-md shadow-blue-500/20">
               BULK ORDERS/ INQUIRY
-            </button>
+            </button> */}
           </div>
         </div>
 

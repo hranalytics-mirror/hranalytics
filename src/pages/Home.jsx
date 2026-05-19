@@ -1,28 +1,26 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
+
 
 import NewsletterSection from "../components/NewsletterSection";
-import Footer from "../components/Footer";
-import BookShow from "../components/BookShow";
-import Quiz from "../components/Quiz";
-import Assessment from "../components/Assessment";
-import Blog from "../components/Blog";
-import Review from "../components/Review";
+
+import Quiz from "../components/QuizSection";
+import Assessment from "../components/AssesmentSection";
+
+import Review from "../components/ReviewSection";
+import Hero from "../components/HeroSec";
+import BooksCarousel from "../components/BookShowSection";
 
 function Home() {
   return (
     <div className="min-h-screen   mx-auto flex flex-col font-sans text-gray-800">
-      <HeroSection id="hero" />
-      <BookShow />
+      
+      <Hero />
+      
+      <BooksCarousel />
       <Quiz />
-
       <Assessment />
-
       {/* <Blog /> */}
-
       <Review />
-
       <NewsletterSection id="newsletter" />
     </div>
   );
