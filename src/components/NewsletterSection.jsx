@@ -324,14 +324,10 @@ const NewsletterSection = () => {
               hover:bg-white/20
             "
           >
-            <a
-              href="mailto:discover@talent-synergy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="mailto:discover@talent-synergy.com">
               {" "}
               <Mail size={16} />
-            </a>
+            </a> 
           </motion.a>
         </motion.div>
       </motion.div>
