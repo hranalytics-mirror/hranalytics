@@ -189,6 +189,7 @@ const NewsletterSection = () => {
           </div>
 
           {/* Linkedin */}
+
           <motion.a
             custom={0}
             variants={socialVariants}
@@ -214,7 +215,13 @@ const NewsletterSection = () => {
               hover:bg-blue-700
             "
           >
-            <Linkedin size={16} />
+            <a
+              href="https://www.linkedin.com/in/hranalytics-mirror/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin size={16} />{" "}
+            </a>
           </motion.a>
 
           {/* Instagram */}
@@ -246,7 +253,14 @@ const NewsletterSection = () => {
               hover:opacity-90
             "
           >
-            <Instagram size={16} />
+            <a
+              href="https://www.instagram.com/hr_analytics_mirror/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <Instagram size={16} />
+            </a>
           </motion.a>
 
           {/* X */}
@@ -272,7 +286,14 @@ const NewsletterSection = () => {
               transition
             "
           >
-            <img src={xLogo} alt="X" />
+            <a
+              href="https://x.com/HRMirror"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <img src={xLogo} alt="X" />
+            </a>
           </motion.a>
 
           {/* Mail */}
@@ -303,7 +324,14 @@ const NewsletterSection = () => {
               hover:bg-white/20
             "
           >
-            <Mail size={16} />
+            <a
+              href="mailto:discover@talent-synergy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <Mail size={16} />
+            </a>
           </motion.a>
         </motion.div>
       </motion.div>

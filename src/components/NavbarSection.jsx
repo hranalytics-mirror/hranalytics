@@ -59,10 +59,10 @@ const NavbarSection = () => {
                     sm:text-lg
                   "
                 >
-                  HR MIRROR 500
+                  HR Analytics-Mirror
                 </span>
 
-                <span
+                {/* <span
                   className="
                     text-[10px]
                     font-medium
@@ -71,7 +71,7 @@ const NavbarSection = () => {
                   "
                 >
                   Stories HR is Missing
-                </span>
+                </span> */}
               </div>
             </motion.div>
           </Link>
@@ -95,6 +95,7 @@ const NavbarSection = () => {
               {
                 label: "Contact Us",
                 link: "https://talent-synergy.com/contact-us",
+                isExternal: true,
               },
             ].map((item, index) => (
               <motion.div
@@ -123,14 +124,20 @@ const NavbarSection = () => {
                 ) : (
                   <a
                     href={item.link}
-                    className="
+                    className={`
                       text-sm
                       font-medium
                       text-gray-600
                       transition
                       hover:text-primary
-                    "
+                      ${item.label === "Contact Us" ? "hidden" : "block"}
+                      `}
                   >
+                    {item.label}
+                  </a>
+                )}
+                {item.isExternal && (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
                     {item.label}
                   </a>
                 )}
@@ -278,8 +285,9 @@ const NavbarSection = () => {
                     isRoute: true,
                   },
                   {
-                    label: "Contact",
+                    label: "Contact Us",
                     link: "https://talent-synergy.com/contact-us",
+                    isExternal: true,
                   },
                 ].map((item, index) => (
                   <motion.div key={index} variants={navItem} custom={index}>
@@ -344,16 +352,27 @@ const NavbarSection = () => {
                     ) : (
                       <a
                         href={item.link}
+                        
                         onClick={() => {
                           setTimeout(() => {
                             setIsOpen(false);
                           }, 300);
                         }}
-                        className="
+                        className={`
                           text-sm
                           font-medium
                           text-gray-600
-                        "
+                           ${item.label === "Contact Us" ? "hidden" : "block"}
+                      `}
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                    {item.isExternal && (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {item.label}
                       </a>

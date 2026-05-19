@@ -1,24 +1,6 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF4F8B"/>
-      <stop offset="1" stop-color="#FF7FA5"/>
-    </linearGradient>
-  </defs>
-
-  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#bg)"/>
-
-  <!-- Heart -->
-  <path d="M64 92
-           C60 88, 36 72, 36 52
+<svg id="SvgjsSvg1021" width="288" height="288" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs1022"></defs><g id="SvgjsG1023"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="288" height="288"><defs><linearGradient id="a" x1="0" x2="128" y1="0" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#2563eb" class="svgShape stopColorff4f8b-2"></stop><stop offset="1" stop-color="#2563eb" class="svgShape stopColorff7fa5-3"></stop></linearGradient></defs><rect width="120" height="120" x="4" y="4" fill="url(#a)" rx="24" class="svgShape colorgradient-4 selectable"></rect><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M64 92           C60 88, 36 72, 36 52
            C36 42, 43 36, 52 36
            C58 36, 63 39, 64 44
            C65 39, 70 36, 76 36
            C85 36, 92 42, 92 52
-           C92 72, 68 88, 64 92Z"
-        stroke="white"
-        stroke-width="5"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
-</svg>
+           C92 72, 68 88, 64 92Z" fill="none" class="svgStroke colorStrokeffffff-5 selectable"></path></svg></g></svg>

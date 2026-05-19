@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import books from "../utils/books.js";
 
@@ -9,6 +9,7 @@ import kindeIcon from "../assets/kindle.svg";
 import ziffyIcon from "../assets/ziffy.svg";
 
 import { ShoppingCart } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const fadeUp = {
   hidden: {
@@ -51,6 +52,15 @@ const BookDetailsPage = () => {
             shadow-sm
           "
         >
+          <div className="pt-2 px-6">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition"
+            >
+              <ArrowLeft size={18} />
+              Back to Home
+            </Link>
+          </div>
           <div className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-2">
             {/* LEFT */}
             <motion.div
@@ -134,9 +144,9 @@ const BookDetailsPage = () => {
                 transition={{ duration: 0.7 }}
                 className="mt-10"
               >
-                <h3 className="mb-5 text-xl font-bold text-[#101828]">
+                <button className="mb-5 text-xl font-bold text-white bg-gradient-to-br from-primary via-blue-600 to-blue-700 w-[200px] rounded-lg h-[40px]">
                   Buy This Book
-                </h3>
+                </button>
 
                 <div className="grid gap-4 sm:grid-cols-3">
                   {/* AMAZON */}

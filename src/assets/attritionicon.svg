@@ -1,16 +1,1 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF0F7B"/>
-      <stop offset="1" stop-color="#F89B29"/>
-    </linearGradient>
-  </defs>
-
-  <rect x="4" y="4" width="120" height="120" rx="24" fill="url(#bg)"/>
-
-  <path d="M38 34H66V94H38C35.8 94 34 92.2 34 90V38C34 35.8 35.8 34 38 34Z"
-        stroke="white" stroke-width="6" stroke-linejoin="round"/>
-
-  <path d="M58 64H92" stroke="white" stroke-width="6" stroke-linecap="round"/>
-  <path d="M80 50L94 64L80 78" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg id="SvgjsSvg1031" width="288" height="288" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs"><defs id="SvgjsDefs1032"></defs><g id="SvgjsG1033"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="288" height="288"><defs><linearGradient id="a" x1="0" x2="128" y1="0" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#db2777" class="svgShape stopColorff0f7b-2"></stop><stop offset="1" stop-color="#db2777" class="svgShape stopColorf89b29-3"></stop></linearGradient></defs><rect width="120" height="120" x="4" y="4" fill="url(#a)" rx="24" class="svgShape colorgradient-4 selectable"></rect><path stroke="#fff" stroke-linejoin="round" stroke-width="6" d="M38 34H66V94H38C35.8 94 34 92.2 34 90V38C34 35.8 35.8 34 38 34Z" fill="none" class="svgStroke colorStrokeffffff-5 selectable"></path><path stroke="#fff" stroke-linecap="round" stroke-width="6" d="M58 64H92" fill="none" class="svgStroke colorStrokeffffff-6 selectable"></path><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M80 50L94 64L80 78" fill="none" class="svgStroke colorStrokeffffff-7 selectable"></path></svg></g></svg>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import trophy from "../assets/trophy.png";
 import discount from "../assets/discount.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const featureVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -19,6 +19,7 @@ const featureVariants = {
 };
 
 const Quiz = () => {
+  const navigate = useNavigate();
   return (
     <section className="w-full px-4 py-10 sm:px-6 lg:px-8">
       <motion.div
@@ -282,9 +283,10 @@ const Quiz = () => {
                 transition
                 sm:text-[15px]
               "
+              onClick={() => navigate("/commingsoon")}
             >
               <span className="text-[18px]">🎮</span>
-              <Link to={"/commingsoon"}>PLAY QUIZ NOW</Link>
+              PLAY QUIZ NOW
             </motion.button>
           </motion.div>
         </div>

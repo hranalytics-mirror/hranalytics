@@ -2,9 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { Clock3, Rocket, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CommingSoon = () => {
+  const navigate = useNavigate();
   return (
     <section
       className="
@@ -302,8 +303,9 @@ const CommingSoon = () => {
             text-white
             shadow-[0_12px_40px_rgba(79,70,229,0.35)]
           "
+          onClick={() => navigate("/")}
         >
-          <Link to={"/"}>BACK TO HOME</Link>
+          BACK TO HOME
         </motion.button>
       </div>
     </section>

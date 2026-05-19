@@ -11,10 +11,12 @@ import performanceicon from "../assets/performanceicon.svg";
 import payicon from "../assets/payicon.svg";
 
 import { CheckCircle, FileText, Lock, Download } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Assessment = () => {
   const [individual, setIndividual] = useState(false);
   const [enterprise, setEnterprise] = useState(false);
+  const navigate = useNavigate();
 
   function setForEnterprise() {
     setEnterprise(true);
@@ -309,6 +311,7 @@ const Assessment = () => {
                   key={index}
                   whileHover={{ y: -6 }}
                   className="flex flex-col items-center text-center"
+                  onClick={() => navigate("/commingsoon")} 
                 >
                   <img
                     src={item.icon}

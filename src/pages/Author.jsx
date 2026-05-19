@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 import prarthana from "../assets/prathana.png";
 import abhi from "../assets/abhi.png";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const fadeUp = {
   hidden: {
@@ -27,6 +29,15 @@ const Author = () => {
           transition={{ staggerChildren: 0.12 }}
           className="text-center"
         >
+          <div className="pt-2 px-6">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition"
+            >
+              <ArrowLeft size={18} />
+              Back to Home
+            </Link>
+          </div>
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.5 }}

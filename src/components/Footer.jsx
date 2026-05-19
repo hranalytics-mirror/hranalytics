@@ -10,7 +10,7 @@ const Footer = () => {
       className="bg-[#0B1120] pt-2 pb-1 text-white text-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr_1.6fr] gap-8 mb-2">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-1">
@@ -19,11 +19,11 @@ const Footer = () => {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">
-                  HR MIRROR 500
+                  HR Analytics-Mirror
                 </span>
-                <span className="text-[10px] text-gray-400 font-medium">
+                {/* <span className="text-[10px] text-gray-400 font-medium">
                   Stories HR is Missing
-                </span>
+                </span> */}
               </div>
             </div>
             <p className="text-gray-400 text-xs leading-relaxed max-w-[200px]">
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Links Columns */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 col-span-1 lg:col-span-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-2 gap-8">
             <div>
               <h4 className="font-bold text-white text-xs mb-2 uppercase tracking-wider">
                 QUICK LINKS
@@ -146,6 +146,8 @@ const Footer = () => {
                   <li>
                     <a
                       href="https://talent-synergy.com/contact-us"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white transition text-xs"
                     >
                       Contact Us
@@ -179,15 +181,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className=" min-w-fit">
             <h4 className="font-bold text-white text-xs mb-4 uppercase tracking-wider">
               GET IN TOUCH
             </h4>
-            <div className="flex items-center gap-2 mb-4 text-gray-400 text-xs">
+            <div className="flex items-center gap-2 mb-4 text-gray-400 text-xs w-max">
               <Mail size={14} />
               <a
                 href="mailto:discover@talent-synergy.com"
-                className="hover:text-white transition underline underline-offset-2"
+                className="hover:text-white transition underline underline-offset-2 whitespace-nowrap"
               >
                 discover@talent-synergy.com
               </a>
@@ -200,7 +202,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-6 text-center">
           <p className="text-xs text-gray-500 font-medium">
-            © 2025 HR Mirror 500. All Rights Reserved.
+            © 2026 HR Analytics – Mirror. All Rights Reserved.
           </p>
         </div>
       </div>

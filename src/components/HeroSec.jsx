@@ -1,8 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import background from "../assets/bac_upscaled.png";
-
+import background from "../assets/back_without_book.png";
+import book1 from "../assets/book1.png";
+import book2 from "../assets/book2.png";
+import book3 from "../assets/book3.png";
+import book4 from "../assets/book4.png";
+import book5 from "../assets/book5.png";
 import {
   Users,
   FileText,
@@ -12,9 +16,13 @@ import {
   Gift,
   ShoppingCart,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import RotatingCarousel from "./RotatingCarousel";
+
+const images = [book1, book2, book3, book4, book5];
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <>
       {/* DESKTOP*/}
@@ -94,7 +102,7 @@ const Hero = () => {
               transition={{ delay: 0.5, duration: 0.7 }}
               className="
                 mt-4
-                max-w-[560px]
+                max-w-[460px]
                 text-[20px]
                 leading-[1.5]
                 font-bold
@@ -105,7 +113,7 @@ const Hero = () => {
               <span className="bg-gradient-to-b from-[#FF4D7A] to-[#D91E63] bg-clip-text text-transparent">
                 people
               </span>
-              , <span className="text-[#2166F3]">patterns</span> and{" "}
+              , <span className="text-[#5008d6]">patterns</span> and{" "}
               <span className="text-[#2BA84A]">stories</span> behind them.
             </motion.p>
 
@@ -114,7 +122,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="mt-8 flex items-center gap-4 w-[800px]"
+              className="mt-8 flex items-center gap-4 flex-wrap lg:w-[600px] xl:w-[700px]  " 
             >
               {" "}
               <motion.button
@@ -130,8 +138,9 @@ const Hero = () => {
                   font-semibold text-white
                   shadow-[0_10px_30px_rgba(33,102,243,0.35)]
                 "
+                onClick={() => navigate("/commingsoon")}
               >
-                <Link to="/commingsoon">EXPLORE INSIGHTS</Link>
+                EXPLORE INSIGHTS
                 <ArrowRight size={18} />
               </motion.button>{" "}
               <motion.button
@@ -147,8 +156,9 @@ const Hero = () => {
                   font-semibold text-white
                   shadow-[0_10px_30px_rgba(235,60,120,0.35)]
                 "
+                onClick={() => navigate("/commingsoon")}
               >
-                <Link to="/commingsoon">PLAY QUIZ & WIN</Link>
+                PLAY QUIZ & WIN
                 <Gift size={18} />
               </motion.button>{" "}
               <motion.button
@@ -159,13 +169,14 @@ const Hero = () => {
                 whileTap={{ scale: 0.96 }}
                 className="
                   flex items-center gap-3
-                  rounded-xl bg-[#2BA84A]
+                  rounded-xl bg-[#2BA84A]/70
                   px-4 py-3 text-[14px]
                   font-semibold text-white
                   shadow-[0_10px_30px_rgba(43,168,74,0.35)]
                 "
+                onClick={() => navigate("/commingsoon")}
               >
-                <Link to="/commingsoon">BUY THE SUBSCRIPTION</Link>
+                BUY THE SUBSCRIPTION
                 <ShoppingCart size={18} />
               </motion.button>
             </motion.div>
@@ -177,8 +188,8 @@ const Hero = () => {
               transition={{ delay: 0.9, duration: 0.7 }}
               className="
                 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-4
-                gap-5 mt-8
-                md:w-[400px] lg:w-[600px]
+                gap-5 mt-[5%]
+                md:w-[400px] lg:w-[500px] xl:w-[600px]
               "
             >
               {/* CARD 1 */}
@@ -255,6 +266,15 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
+        <div className="absolute mdlg:w-[30%] lg:w-[55%] lgxl:w-[48%] xl:w-[45%]  h-[400px] top-[5%] xl:right-[2%]  lg:right-[1%] ">
+          <RotatingCarousel
+            images={images}
+            //     className="
+            //   bottom-[120px]
+            //   right-[140px]
+            // "
+          />
+        </div>
       </section>
       {/* Tablet*/}
       <section
