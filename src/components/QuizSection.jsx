@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import trophy from "../assets/trophy.png";
 import discount from "../assets/discount.png";
+import { Link } from "react-router-dom";
 
 const featureVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -37,7 +38,7 @@ const Quiz = () => {
           text-white
           shadow-xl
           sm:px-6
-          lg:px-8
+          lg:px-8 scroll-mt-24
         "
       >
         <div
@@ -283,7 +284,7 @@ const Quiz = () => {
               "
             >
               <span className="text-[18px]">🎮</span>
-              PLAY QUIZ NOW
+              <Link to={"/commingsoon"}>PLAY QUIZ NOW</Link>
             </motion.button>
           </motion.div>
         </div>

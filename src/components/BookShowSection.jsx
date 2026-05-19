@@ -74,7 +74,7 @@ const BookCard = ({ book, index }) => {
         scale: 1.02,
       }}
       id="books"
-      className="w-full rounded-2xl border border-gray-300 bg-gray-100 p-3 shadow-sm transition-all duration-300"
+      className="w-full rounded-2xl border border-gray-300 bg-gray-100 p-3 shadow-sm transition-all duration-300 scroll-mt-24"
     >
       {/* Top */}
       <div className="flex items-center justify-center gap-3 sm:gap-4">

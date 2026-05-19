@@ -26,7 +26,7 @@ const NavbarSection = () => {
       initial={{ y: -80 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 bg-white shadow-sm"
+      className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
@@ -186,7 +186,7 @@ const NavbarSection = () => {
                 hover:bg-pink-700
               "
             >
-              Grab Your Book RN
+              <a href="#books">Grab Your Book RN</a>
             </motion.button>
           </div>
 
@@ -230,7 +230,13 @@ const NavbarSection = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.35 }}
-              className="overflow-hidden lg:hidden"
+              className="  absolute
+  top-full
+  left-0
+  w-full
+  lg:hidden
+  z-50
+"
             >
               <motion.div
                 initial="hidden"
@@ -243,14 +249,19 @@ const NavbarSection = () => {
                   },
                 }}
                 className="
-                  flex
-                  flex-col
-                  gap-5
-                  border-t
-                  border-gray-100
-                  pt-4
-                  pb-6
-                "
+  mx-4
+  mt-3
+  flex
+  flex-col
+  gap-5
+  rounded-2xl
+  border
+  border-white/20
+  bg-white/95
+  p-6
+  shadow-2xl
+  backdrop-blur-xl
+"
               >
                 {[
                   { label: "Home", link: "/", isRoute: true },
@@ -276,7 +287,11 @@ const NavbarSection = () => {
                       <div className="flex items-center gap-2">
                         <a
                           href={item.link}
-                          onClick={() => setIsOpen(false)}
+                          onClick={() => {
+                            setTimeout(() => {
+                              setIsOpen(false);
+                            }, 300);
+                          }}
                           className="
                             text-sm
                             font-medium
@@ -310,7 +325,11 @@ const NavbarSection = () => {
                     ) : item.isRoute ? (
                       <Link
                         to={item.link}
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                          setTimeout(() => {
+                            setIsOpen(false);
+                          }, 300);
+                        }}
                         className={`
                           text-sm font-medium
                           ${
@@ -325,7 +344,11 @@ const NavbarSection = () => {
                     ) : (
                       <a
                         href={item.link}
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                          setTimeout(() => {
+                            setIsOpen(false);
+                          }, 300);
+                        }}
                         className="
                           text-sm
                           font-medium
@@ -358,7 +381,16 @@ const NavbarSection = () => {
                     hover:bg-pink-700
                   "
                 >
-                  Grab Your Book RN
+                  <a
+                    href="#books"
+                    onClick={() => {
+                      setTimeout(() => {
+                        setIsOpen(false);
+                      }, 300);
+                    }}
+                  >
+                    Grab Your Book RN
+                  </a>
                 </motion.button>
               </motion.div>
             </motion.div>

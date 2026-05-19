@@ -40,9 +40,8 @@ const reviews = [
 
 const Review = () => {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8">
+    <section id="reviews" className="w-full px-4 sm:px-6 lg:px-8 scroll-mt-24">
       <motion.div
-        id="reviews"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

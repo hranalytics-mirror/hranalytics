@@ -1,185 +1,162 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import brandlogo from "../assets/brandLogo.png";
-
-const NavbarSection = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to={"/"}>
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img src={brandlogo} alt="brandlogo" className="rounded-full" />
-              </div>
-
-              <div className="flex flex-col">
-                <span className="font-bold text-base sm:text-lg text-blue-950 leading-tight">
-                  HR MIRROR 500
-                </span>
-
-                <span className="text-[10px] sm:text-xs text-gray-500 font-medium">
-                  Stories HR is Missing
-                </span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6 lg:items-center">
-            <Link
-              to={"/"}
-              className="text-secondary font-medium text-sm hover:text-pink-700 transition"
+<AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-hidden lg:hidden"
             >
-              Home
-            </Link>
-
-            <a
-              href="#books"
-              className="text-gray-600 hover:text-primary font-medium text-sm transition"
-            >
-              Books
-            </a>
-
-            <a
-              href="#assessments"
-              className="text-gray-600 hover:text-primary font-medium text-sm transition"
-            >
-              Tools & Assessments
-            </a>
-
-            <div className="relative">
-              <a
-                href="#quiz"
-                className="text-gray-600 hover:text-primary font-medium text-sm transition"
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.06,
+                    },
+                  },
+                }}
+                className="
+                  flex
+                  flex-col
+                  gap-5
+                  border-t
+                  border-gray-100
+                  pt-4
+                  pb-6
+                "
               >
-                Quiz Arena
-              </a>
+                {[
+                  { label: "Home", link: "/", isRoute: true },
+                  { label: "Books", link: "#books" },
+                  {
+                    label: "Tools & Assessments",
+                    link: "#assessments",
+                  },
+                  { label: "Quiz Arena", link: "#quiz", new: true },
+                  { label: "Reviews", link: "#reviews" },
+                  {
+                    label: "About Authors",
+                    link: "/author",
+                    isRoute: true,
+                  },
+                  {
+                    label: "Contact",
+                    link: "https://talent-synergy.com/contact-us",
+                  },
+                ].map((item, index) => (
+                  <motion.div key={index} variants={navItem} custom={index}>
+                    {item.new ? (
+                      <div className="flex items-center gap-2">
+                        <a
+                          href={item.link}
+                          onClick={() => {
+                            setTimeout(() => {
+                              setIsOpen(false);
+                            }, 300);
+                          }}
+                          className="
+                            text-sm
+                            font-medium
+                            text-gray-600
+                          "
+                        >
+                          {item.label}
+                        </a>
 
-              <span className="absolute -top-3 -right-6 bg-accent text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                NEW
-              </span>
-            </div>
+                        <motion.span
+                          animate={{
+                            scale: [1, 1.08, 1],
+                          }}
+                          transition={{
+                            repeat: Infinity,
+                            duration: 1.5,
+                          }}
+                          className="
+                            rounded-full
+                            bg-accent
+                            px-1.5
+                            py-0.5
+                            text-[10px]
+                            font-bold
+                            text-white
+                          "
+                        >
+                          NEW
+                        </motion.span>
+                      </div>
+                    ) : item.isRoute ? (
+                      <Link
+                        to={item.link}
+                        onClick={() => {
+                          setTimeout(() => {
+                            setIsOpen(false);
+                          }, 300);
+                        }}
+                        className={`
+                          text-sm font-medium
+                          ${
+                            item.label === "Home"
+                              ? "text-secondary"
+                              : "text-gray-600"
+                          }
+                        `}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.link}
+                        onClick={() => {
+                          setTimeout(() => {
+                            setIsOpen(false);
+                          }, 300);
+                        }}
+                        className="
+                          text-sm
+                          font-medium
+                          text-gray-600
+                        "
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </motion.div>
+                ))}
 
-            <a
-              href="#reviews"
-              className="text-gray-600 hover:text-primary font-medium text-sm transition"
-            >
-              Reviews
-            </a>
-
-            <Link
-              to={"/author"}
-              className="text-gray-600 hover:text-primary font-medium text-sm transition"
-            >
-              About Authors
-            </Link>
-
-            <a
-              href="https://talent-synergy.com/contact-us"
-              className="text-gray-600 hover:text-primary font-medium text-sm transition"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex">
-            <button className="bg-secondary hover:bg-pink-700 text-white px-2 py-2 rounded-md font-medium text-sm shadow-md shadow-pink-200 transition-all">
-              Grab Your Book RN
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-gray-700"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-[500px] pb-6" : "max-h-0"
-          }`}
-        >
-          <div className="flex flex-col gap-5 pt-4 border-t border-gray-100">
-            <Link
-              to={"/"}
-              onClick={() => setIsOpen(false)}
-              className="text-secondary font-medium text-sm"
-            >
-              Home
-            </Link>
-
-            <a
-              href="#books"
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 font-medium text-sm"
-            >
-              Books
-            </a>
-
-            <a
-              href="#assessments"
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 font-medium text-sm"
-            >
-              Tools & Assessments
-            </a>
-
-            <div className="flex items-center gap-2">
-              <a
-                href="#quiz"
-                onClick={() => setIsOpen(false)}
-                className="text-gray-600 font-medium text-sm"
-              >
-                Quiz Arena
-              </a>
-
-              <span className="bg-accent text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
-                NEW
-              </span>
-            </div>
-
-            <a
-              href="#reviews"
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 font-medium text-sm"
-            >
-              Reviews
-            </a>
-
-            <Link
-              to={"/author"}
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 font-medium text-sm"
-            >
-              About Authors
-            </Link>
-
-            <a
-              href="#contactus"
-              onClick={() => setIsOpen(false)}
-              className="text-gray-600 font-medium text-sm"
-            >
-              Contact
-            </a>
-
-            <button className="bg-secondary hover:bg-pink-700 text-white rounded-md px-6  py-3 font-medium text-sm shadow-md shadow-pink-200 transition-all w-full">
-              Grab Your Book RN
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default NavbarSection;
+                <motion.button
+                  whileHover={{
+                    scale: 1.02,
+                  }}
+                  whileTap={{ scale: 0.96 }}
+                  className="
+                    w-full
+                    rounded-md
+                    bg-secondary
+                    px-6
+                    py-3
+                    text-sm
+                    font-medium
+                    text-white
+                    shadow-md
+                    shadow-pink-200
+                    transition-all
+                    hover:bg-pink-700
+                  "
+                >
+                  <a
+                    href="#books"
+                    onClick={() => {
+                      setTimeout(() => {
+                        setIsOpen(false);
+                      }, 300);
+                    }}
+                  >
+                    Grab Your Book RN
+                  </a>
+                </motion.button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>

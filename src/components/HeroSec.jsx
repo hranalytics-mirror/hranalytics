@@ -12,6 +12,7 @@ import {
   Gift,
   ShoppingCart,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -115,6 +116,7 @@ const Hero = () => {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="mt-8 flex items-center gap-4 w-[800px]"
             >
+              {" "}
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -129,10 +131,9 @@ const Hero = () => {
                   shadow-[0_10px_30px_rgba(33,102,243,0.35)]
                 "
               >
-                EXPLORE INSIGHTS
+                <Link to="/commingsoon">EXPLORE INSIGHTS</Link>
                 <ArrowRight size={18} />
-              </motion.button>
-
+              </motion.button>{" "}
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -147,10 +148,9 @@ const Hero = () => {
                   shadow-[0_10px_30px_rgba(235,60,120,0.35)]
                 "
               >
-                PLAY QUIZ & WIN
+                <Link to="/commingsoon">PLAY QUIZ & WIN</Link>
                 <Gift size={18} />
-              </motion.button>
-
+              </motion.button>{" "}
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -165,7 +165,7 @@ const Hero = () => {
                   shadow-[0_10px_30px_rgba(43,168,74,0.35)]
                 "
               >
-                BUY THE SUBSCRIPTION
+                <Link to="/commingsoon">BUY THE SUBSCRIPTION</Link>
                 <ShoppingCart size={18} />
               </motion.button>
             </motion.div>
@@ -256,6 +256,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </section>
+      {/* Tablet*/}
       <section
         className="
     hidden md:block lg:hidden
@@ -408,6 +409,7 @@ const Hero = () => {
           max-w-[620px]
         "
             >
+              {" "}
               <motion.button
                 whileHover={{
                   scale: 1.04,
@@ -425,10 +427,9 @@ const Hero = () => {
             shadow-[0_10px_30px_rgba(33,102,243,0.35)]
           "
               >
-                EXPLORE INSIGHTS
+                <Link to={"/commingsoon"}> EXPLORE INSIGHTS</Link>
                 <ArrowRight size={18} />
               </motion.button>
-
               <motion.button
                 whileHover={{
                   scale: 1.04,
@@ -446,10 +447,9 @@ const Hero = () => {
             shadow-[0_10px_30px_rgba(235,60,120,0.35)]
           "
               >
-                PLAY QUIZ & WIN
+                <Link to={"/commingsoon"}> PLAY QUIZ & WIN</Link>
                 <Gift size={18} />
               </motion.button>
-
               <motion.button
                 whileHover={{
                   scale: 1.04,
@@ -468,7 +468,7 @@ const Hero = () => {
             shadow-[0_10px_30px_rgba(43,168,74,0.35)]
           "
               >
-                BUY THE SUBSCRIPTION
+                <Link to={"/commingsoon"}>BUY THE SUBSCRIPTION</Link>
                 <ShoppingCart size={18} />
               </motion.button>
             </motion.div>
@@ -752,10 +752,9 @@ const Hero = () => {
           shadow-[0_10px_30px_rgba(33,102,243,0.35)]
         "
             >
-              EXPLORE INSIGHTS
+              <Link to={"/commingsoon"}>EXPLORE INSIGHTS</Link>
               <ArrowRight size={18} />
             </motion.button>
-
             {/* BUTTON 2 */}
             <motion.button
               whileTap={{ scale: 0.95 }}
@@ -776,11 +775,10 @@ const Hero = () => {
           shadow-[0_10px_30px_rgba(235,60,120,0.35)]
         "
             >
-              PLAY QUIZ & WIN
+              <Link to={"/commingsoon"}>PLAY QUIZ & WIN</Link>
               <Gift size={18} />
-            </motion.button>
-
-            {/* BUTTON 3 */}
+            </motion.button>{" "}
+            {/* BUTTON 3 */}{" "}
             <motion.button
               whileTap={{ scale: 0.95 }}
               whileHover={{ scale: 1.03 }}
@@ -800,7 +798,7 @@ const Hero = () => {
           shadow-[0_10px_30px_rgba(43,168,74,0.35)]
         "
             >
-              BUY THE SUBSCRIPTION
+              <Link to={"/commingsoon"}>BUY THE SUBSCRIPTION</Link>
               <ShoppingCart size={18} />
             </motion.button>
           </motion.div>

@@ -55,7 +55,10 @@ const Assessment = () => {
   ];
 
   return (
-    <section id="assessments" className="w-full px-4 py-10 sm:px-6 lg:px-8">
+    <section
+      id="assessments"
+      className="w-full px-4 py-10 sm:px-6 lg:px-8 scroll-mt-24"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <motion.div
@@ -234,7 +237,7 @@ const Assessment = () => {
               mt-6
               rounded-2xl
               bg-green-100
-              p-5
+              p-5 scroll-mt-24
             "
             id="individual"
           >
@@ -284,7 +287,7 @@ const Assessment = () => {
               mt-6
               rounded-2xl
               bg-pink-100
-              p-5
+              p-5 scroll-mt-24
             "
             id="enterprises"
           >
