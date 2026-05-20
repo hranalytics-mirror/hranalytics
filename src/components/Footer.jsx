@@ -81,10 +81,10 @@ const Footer = () => {
               <ul className="">
                 <li>
                   <a
-                    href="#assessments"
+                    href="#assessments" 
                     className="text-gray-400 hover:text-white transition text-xs"
                   >
-                    Tools& Assessments
+                    Tools & Assessments
                   </a>
                 </li>
                 <li>

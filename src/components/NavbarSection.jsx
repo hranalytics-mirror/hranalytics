@@ -173,12 +173,18 @@ const NavbarSection = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-            <motion.button
+            <motion.a
               whileHover={{
                 scale: 1.05,
                 y: -2,
               }}
               whileTap={{ scale: 0.96 }}
+              href="#books"
+              onClick={() => {
+                setTimeout(() => {
+                  setIsOpen(false);
+                }, 300);
+              }}
               className="
                 rounded-md
                 bg-secondary
@@ -187,14 +193,14 @@ const NavbarSection = () => {
                 text-sm
                 font-medium
                 text-white
-                shadow-md
+                shadow-md text-center
                 shadow-pink-200
                 transition-all
                 hover:bg-pink-700
               "
             >
-              <a href="#books">Grab Your Book RN</a>
-            </motion.button>
+              Grab Your Book RN
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -379,11 +385,17 @@ const NavbarSection = () => {
                   </motion.div>
                 ))}
 
-                <motion.button
+                <motion.a
                   whileHover={{
                     scale: 1.02,
                   }}
                   whileTap={{ scale: 0.96 }}
+                  href="#books"
+                  onClick={() => {
+                    setTimeout(() => {
+                      setIsOpen(false);
+                    }, 300);
+                  }}
                   className="
                     w-full
                     rounded-md
@@ -393,23 +405,14 @@ const NavbarSection = () => {
                     text-sm
                     font-medium
                     text-white
-                    shadow-md
+                    shadow-md text-center
                     shadow-pink-200
                     transition-all
                     hover:bg-pink-700
                   "
                 >
-                  <a
-                    href="#books"
-                    onClick={() => {
-                      setTimeout(() => {
-                        setIsOpen(false);
-                      }, 300);
-                    }}
-                  >
-                    Grab Your Book RN
-                  </a>
-                </motion.button>
+                  Grab Your Book RN
+                </motion.a>
               </motion.div>
             </motion.div>
           )}
