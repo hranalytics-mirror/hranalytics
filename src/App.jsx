@@ -7,18 +7,17 @@ import Author from "./pages/Author";
 import Layout from "./layout/Layout";
 import CommingSoon from "./pages/CommingSoon";
 
-
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/commingsoon" element={<CommingSoon />} />
+        <Route path="/comingsoon" element={<CommingSoon />} />
         <Route path="/book/:id" element={<BookDetails />} />
         <Route path="/author" element={<Author />} />
       </Route>
     </Routes>
-  ); 
+  );
 }
 
 export default App;

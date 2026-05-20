@@ -295,7 +295,7 @@ const Quiz = () => {
                 transition
                 sm:text-[15px]
               "
-              onClick={() => navigate("/commingsoon")}
+              onClick={() => navigate("/comingsoon")}
             >
               <span className="text-[18px]">🎮</span>
               PLAY QUIZ NOW

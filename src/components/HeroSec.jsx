@@ -138,7 +138,7 @@ const Hero = () => {
                   font-semibold text-white
                   shadow-[0_10px_30px_rgba(33,102,243,0.35)]
                 "
-                onClick={() => navigate("/commingsoon")}
+                onClick={() => navigate("/comingsoon")}
               >
                 EXPLORE INSIGHTS
                 <ArrowRight size={18} />
@@ -156,7 +156,7 @@ const Hero = () => {
                   font-semibold text-white
                   shadow-[0_10px_30px_rgba(235,60,120,0.35)]
                 "
-                onClick={() => navigate("/commingsoon")}
+                onClick={() => navigate("/comingsoon")}
               >
                 PLAY QUIZ & WIN
                 <Gift size={18} />
@@ -174,7 +174,7 @@ const Hero = () => {
                   font-semibold text-white
                   shadow-[0_10px_30px_rgba(43,168,74,0.35)]
                 "
-                onClick={() => navigate("/commingsoon")}
+                onClick={() => navigate("/comingsoon")}
               >
                 BUY THE SUBSCRIPTION
                 <ShoppingCart size={18} />
@@ -446,7 +446,7 @@ const Hero = () => {
             text-white
             shadow-[0_10px_30px_rgba(33,102,243,0.35)]
           "
-                onClick={() => navigate("/commingsoon")}
+                onClick={() => navigate("/comingsoon")}
               >
                 EXPLORE INSIGHTS
                 <ArrowRight size={18} />
@@ -467,7 +467,7 @@ const Hero = () => {
             text-white
             shadow-[0_10px_30px_rgba(235,60,120,0.35)]
           "
-                onClick={() => navigate("/commingsoon")}
+                onClick={() => navigate("/comingsoon")}
               >
                 PLAY QUIZ & WIN
                 <Gift size={18} />
@@ -489,7 +489,7 @@ const Hero = () => {
             text-white
             shadow-[0_10px_30px_rgba(43,168,74,0.35)]
           "
-                onClick={() => navigate("/commingsoon")}
+                onClick={() => navigate("/comingsoon")}
               >
                 BUY THE SUBSCRIPTION
                 <ShoppingCart size={18} />
@@ -774,7 +774,7 @@ const Hero = () => {
           text-white
           shadow-[0_10px_30px_rgba(33,102,243,0.35)]
         "
-              onClick={() => navigate("/commingsoon")}
+              onClick={() => navigate("/comingsoon")}
             >
               EXPLORE INSIGHTS
               <ArrowRight size={18} />
@@ -798,7 +798,7 @@ const Hero = () => {
           text-white
           shadow-[0_10px_30px_rgba(235,60,120,0.35)]
         "
-              onClick={() => navigate("/commingsoon")}
+              onClick={() => navigate("/comingsoon")}
             >
               PLAY QUIZ & WIN
               <Gift size={18} />
@@ -822,7 +822,7 @@ const Hero = () => {
           text-white
           shadow-[0_10px_30px_rgba(43,168,74,0.35)]
         "
-              onClick={() => navigate("/commingsoon")}
+              onClick={() => navigate("/comingsoon")}
             >
               BUY THE SUBSCRIPTION
               <ShoppingCart size={18} />

@@ -313,7 +313,7 @@ const Assessment = () => {
                   key={index}
                   whileHover={{ y: -6 }}
                   className="flex flex-col items-center text-center"
-                  onClick={() => navigate("/commingsoon")}
+                  onClick={() => navigate("/comingsoon")}
                 >
                   <img
                     src={item.icon}
