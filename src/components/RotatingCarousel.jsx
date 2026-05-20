@@ -108,7 +108,8 @@ const RotatingCarousel = ({ images, className = "" }) => {
           >
             <img
               src={img}
-              alt=""
+              key={index}
+              alt={`Book cover ${index + 1}`}
               className="
                 w-full
                 h-full

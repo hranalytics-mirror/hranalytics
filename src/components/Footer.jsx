@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail } from "lucide-react";
-import brandlogo from "../assets/brandLogo.png";
+import brandlogo from "../assets/brandLogo.webp";
 import { Link } from "react-router-dom";
 
 const Footer = () => {

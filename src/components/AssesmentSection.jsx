@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import assessment1 from "../assets/assesment1.png";
-import assessment2 from "../assets/assesment2.png";
+import assessment1 from "../assets/assesment1.webp";
+import assessment2 from "../assets/assesment2.webp";
 
 import attritionicon from "../assets/attritionicon.svg";
 import engagementicon from "../assets/engagementicon.svg";
@@ -143,7 +143,7 @@ const Assessment = () => {
             <motion.img
               whileHover={{ scale: 1.04 }}
               src={assessment1}
-              alt=""
+              alt="HR analytics self assessment illustration"
               className="
                 mt-6
                 h-[160px]
@@ -216,7 +216,7 @@ const Assessment = () => {
             <motion.img
               whileHover={{ scale: 1.04 }}
               src={assessment2}
-              alt=""
+              alt="HR analytics maturity assessment illustration"
               className="
                 mt-6
                 h-[160px]
@@ -243,9 +243,9 @@ const Assessment = () => {
             "
             id="individual"
           >
-            <h1 className="mb-6 text-center text-2xl font-bold tracking-wide text-green-600">
+            <h2 className="mb-6 text-center text-2xl font-bold tracking-wide text-green-600">
               For Individuals
-            </h1>
+            </h2>
 
             <div
               className="
@@ -260,13 +260,15 @@ const Assessment = () => {
                 <motion.a
                   key={index}
                   href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -6 }}
                   whileTap={{ scale: 0.95 }}
                   className="flex flex-col items-center text-center"
                 >
                   <img
                     src={item.icon}
-                    alt=""
+                    alt="Analytics icon"
                     className="mb-2 w-[55px] sm:w-[60px]"
                   />
 
@@ -293,9 +295,9 @@ const Assessment = () => {
             "
             id="enterprises"
           >
-            <h1 className="mb-6 text-center text-2xl font-bold tracking-wide text-pink-600">
+            <h2 className="mb-6 text-center text-2xl font-bold tracking-wide text-pink-600">
               For Enterprises
-            </h1>
+            </h2>
 
             <div
               className="
@@ -307,22 +309,22 @@ const Assessment = () => {
               "
             >
               {analyticsItems.map((item, index) => (
-                <motion.div
+                <motion.button
                   key={index}
                   whileHover={{ y: -6 }}
                   className="flex flex-col items-center text-center"
-                  onClick={() => navigate("/commingsoon")} 
+                  onClick={() => navigate("/commingsoon")}
                 >
                   <img
                     src={item.icon}
-                    alt=""
+                    alt="Analytics icon"
                     className="mb-2 w-[55px] sm:w-[60px]"
                   />
 
                   <p className="text-sm font-medium tracking-wide text-gray-500">
                     {item.title}
                   </p>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
           </motion.div>

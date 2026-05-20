@@ -13,13 +13,13 @@ import amazonLogo from "../assets/amazon.svg";
 import kindleLogo from "../assets/kindle.svg";
 import ziffybeeLogo from "../assets/ziffy.svg";
 
-import book1 from "../assets/book1.png";
-import book2 from "../assets/book2.png";
-import book3 from "../assets/book3.png";
-import book4 from "../assets/book4.png";
-import book5 from "../assets/book5.png";
+import book1 from "../assets/book1.webp";
+import book2 from "../assets/book2.webp";
+import book3 from "../assets/book3.webp";
+import book4 from "../assets/book4.webp";
+import book5 from "../assets/book5.webp";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const books = [
   {
@@ -60,6 +60,7 @@ const books = [
 ];
 
 const BookCard = ({ book, index }) => {
+  const navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -99,15 +100,14 @@ const BookCard = ({ book, index }) => {
             </p>
           </div>
 
-          <Link to={`/book/${book.id}`}>
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.05 }}
-              className={`mt-4 w-fit rounded-md px-3 py-2 text-[11px] font-semibold text-white sm:text-[12px] ${book.color}`}
-            >
-              BUY NOW
-            </motion.button>
-          </Link>
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            onClick={() => navigate(`/book/${book.id}`)}
+            className={`mt-4 w-fit rounded-md px-3 py-2 text-[11px] font-semibold text-white sm:text-[12px] ${book.color}`}
+          >
+            BUY NOW
+          </motion.button>
         </div>
       </div>
 

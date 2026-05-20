@@ -183,13 +183,10 @@ const NewsletterSection = () => {
           "
         >
           <div className="mr-2 hidden h-8 w-px bg-white/30 md:block"></div>
-
           <div className="mr-2 hidden text-xs font-semibold text-white sm:block">
             Follow us for daily insights
           </div>
-
-          {/* Linkedin */}
-
+          {/* Linkedin */}{" "}
           <motion.a
             custom={0}
             variants={socialVariants}
@@ -201,7 +198,9 @@ const NewsletterSection = () => {
               scale: 1.08,
             }}
             whileTap={{ scale: 0.95 }}
-            href="#"
+            href="https://www.linkedin.com/in/hranalytics-mirror/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               flex
               h-9
@@ -215,16 +214,9 @@ const NewsletterSection = () => {
               hover:bg-blue-700
             "
           >
-            <a
-              href="https://www.linkedin.com/in/hranalytics-mirror/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Linkedin size={16} />{" "}
-            </a>
-          </motion.a>
-
-          {/* Instagram */}
+            <Linkedin size={16} />{" "}
+          </motion.a>{" "}
+          {/* Instagram */}{" "}
           <motion.a
             custom={1}
             variants={socialVariants}
@@ -236,7 +228,9 @@ const NewsletterSection = () => {
               scale: 1.08,
             }}
             whileTap={{ scale: 0.95 }}
-            href="#"
+            href="https://www.instagram.com/hr_analytics_mirror/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               flex
               h-9
@@ -253,16 +247,9 @@ const NewsletterSection = () => {
               hover:opacity-90
             "
           >
-            <a
-              href="https://www.instagram.com/hr_analytics_mirror/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <Instagram size={16} />
-            </a>
+            {" "}
+            <Instagram size={16} />
           </motion.a>
-
           {/* X */}
           <motion.a
             custom={2}
@@ -275,7 +262,9 @@ const NewsletterSection = () => {
               scale: 1.08,
             }}
             whileTap={{ scale: 0.95 }}
-            href="#"
+            href="https://x.com/HRMirror"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               flex
               h-9
@@ -286,16 +275,9 @@ const NewsletterSection = () => {
               transition
             "
           >
-            <a
-              href="https://x.com/HRMirror"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              <img src={xLogo} alt="X" />
-            </a>
+            {" "}
+            <img src={xLogo} alt="X" />
           </motion.a>
-
           {/* Mail */}
           <motion.a
             custom={3}
@@ -308,7 +290,7 @@ const NewsletterSection = () => {
               scale: 1.08,
             }}
             whileTap={{ scale: 0.95 }}
-            href="#"
+            href="mailto:discover@talent-synergy.com"
             className="
               flex
               h-9
@@ -324,11 +306,9 @@ const NewsletterSection = () => {
               hover:bg-white/20
             "
           >
-            <a href="mailto:discover@talent-synergy.com">
-              {" "}
-              <Mail size={16} />
-            </a> 
-          </motion.a>
+            {" "}
+            <Mail size={16} />
+          </motion.a>{" "}
         </motion.div>
       </motion.div>
     </section>

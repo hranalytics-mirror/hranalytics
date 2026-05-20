@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { Menu, X } from "lucide-react";
 
-import brandlogo from "../assets/brandLogo.png";
+import brandlogo from "../assets/brandLogo.webp";
 
 const navItem = {
   hidden: { opacity: 0, y: -10 },
@@ -352,7 +352,6 @@ const NavbarSection = () => {
                     ) : (
                       <a
                         href={item.link}
-                        
                         onClick={() => {
                           setTimeout(() => {
                             setIsOpen(false);

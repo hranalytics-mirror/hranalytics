@@ -2,9 +2,9 @@ import React from "react";
 import { Trophy, Star, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 
-import trophy from "../assets/trophy.png";
-import discount from "../assets/discount.png";
-import { Link, useNavigate } from "react-router-dom";
+import trophy from "../assets/trophy.webp";
+import discount from "../assets/discount.webp";
+import { useNavigate } from "react-router-dom";
 
 const featureVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -74,7 +74,7 @@ const Quiz = () => {
                 rotate: -3,
               }}
               src={trophy}
-              alt="Trophy"
+              alt="Quiz competition trophy illustration"
               className="
                 w-[140px]
                 object-contain
@@ -164,7 +164,11 @@ const Quiz = () => {
                   className="flex items-center gap-3"
                 >
                   <div className="rounded-lg bg-yellow-500/20 p-2">
-                    <Trophy size={20} className="text-yellow-400" />
+                    <Trophy
+                      aria-hidden="true"
+                      size={20}
+                      className="text-yellow-400"
+                    />
                   </div>
 
                   <div className="text-left">
@@ -189,7 +193,11 @@ const Quiz = () => {
                   className="flex items-center gap-3"
                 >
                   <div className="rounded-lg bg-green-500/20 p-2">
-                    <Star size={20} className="text-green-400" />
+                    <Star
+                      aria-hidden="true"
+                      size={20}
+                      className="text-green-400"
+                    />
                   </div>
 
                   <div className="text-left">
@@ -214,7 +222,11 @@ const Quiz = () => {
                   className="flex items-center gap-3"
                 >
                   <div className="rounded-lg bg-purple-500/20 p-2">
-                    <Shield size={20} className="text-purple-400" />
+                    <Shield
+                      aria-hidden="true"
+                      size={20}
+                      className="text-purple-400"
+                    />
                   </div>
 
                   <div className="text-left">
@@ -252,7 +264,7 @@ const Quiz = () => {
               }}
               transition={{ duration: 0.3 }}
               src={discount}
-              alt="Discount"
+              alt="Discount rewards illustration"
               className="
                 w-[110px]
                 object-contain

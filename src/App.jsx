@@ -6,7 +6,7 @@ import BookDetails from "./pages/BookDetails";
 import Author from "./pages/Author";
 import Layout from "./layout/Layout";
 import CommingSoon from "./pages/CommingSoon";
-import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/author" element={<Author />} />
       </Route>
     </Routes>
-  );
+  ); 
 }
 
 export default App;

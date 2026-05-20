@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import background from "../assets/back_without_book.png";
-import book1 from "../assets/book1.png";
-import book2 from "../assets/book2.png";
-import book3 from "../assets/book3.png";
-import book4 from "../assets/book4.png";
-import book5 from "../assets/book5.png";
+import background from "../assets/back_without_book.webp";
+import book1 from "../assets/book1.webp";
+import book2 from "../assets/book2.webp";
+import book3 from "../assets/book3.webp";
+import book4 from "../assets/book4.webp";
+import book5 from "../assets/book5.webp";
 import {
   Users,
   FileText,
@@ -122,7 +122,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="mt-8 flex items-center gap-4 flex-wrap lg:w-[600px] xl:w-[700px]  " 
+              className="mt-8 flex items-center gap-4 flex-wrap lg:w-[600px] xl:w-[700px]  "
             >
               {" "}
               <motion.button
@@ -446,8 +446,9 @@ const Hero = () => {
             text-white
             shadow-[0_10px_30px_rgba(33,102,243,0.35)]
           "
+                onClick={() => navigate("/commingsoon")}
               >
-                <Link to={"/commingsoon"}> EXPLORE INSIGHTS</Link>
+                EXPLORE INSIGHTS
                 <ArrowRight size={18} />
               </motion.button>
               <motion.button
@@ -466,8 +467,9 @@ const Hero = () => {
             text-white
             shadow-[0_10px_30px_rgba(235,60,120,0.35)]
           "
+                onClick={() => navigate("/commingsoon")}
               >
-                <Link to={"/commingsoon"}> PLAY QUIZ & WIN</Link>
+                PLAY QUIZ & WIN
                 <Gift size={18} />
               </motion.button>
               <motion.button
@@ -487,8 +489,9 @@ const Hero = () => {
             text-white
             shadow-[0_10px_30px_rgba(43,168,74,0.35)]
           "
+                onClick={() => navigate("/commingsoon")}
               >
-                <Link to={"/commingsoon"}>BUY THE SUBSCRIPTION</Link>
+                BUY THE SUBSCRIPTION
                 <ShoppingCart size={18} />
               </motion.button>
             </motion.div>
@@ -771,8 +774,9 @@ const Hero = () => {
           text-white
           shadow-[0_10px_30px_rgba(33,102,243,0.35)]
         "
+              onClick={() => navigate("/commingsoon")}
             >
-              <Link to={"/commingsoon"}>EXPLORE INSIGHTS</Link>
+              EXPLORE INSIGHTS
               <ArrowRight size={18} />
             </motion.button>
             {/* BUTTON 2 */}
@@ -794,8 +798,9 @@ const Hero = () => {
           text-white
           shadow-[0_10px_30px_rgba(235,60,120,0.35)]
         "
+              onClick={() => navigate("/commingsoon")}
             >
-              <Link to={"/commingsoon"}>PLAY QUIZ & WIN</Link>
+              PLAY QUIZ & WIN
               <Gift size={18} />
             </motion.button>{" "}
             {/* BUTTON 3 */}{" "}
@@ -817,8 +822,9 @@ const Hero = () => {
           text-white
           shadow-[0_10px_30px_rgba(43,168,74,0.35)]
         "
+              onClick={() => navigate("/commingsoon")}
             >
-              <Link to={"/commingsoon"}>BUY THE SUBSCRIPTION</Link>
+              BUY THE SUBSCRIPTION
               <ShoppingCart size={18} />
             </motion.button>
           </motion.div>

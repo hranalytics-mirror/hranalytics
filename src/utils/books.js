@@ -1,9 +1,9 @@
 // src/data/books.js
-import book1 from "../assets/book1.png";
-import book2 from "../assets/book2.png";
-import book3 from "../assets/book3.png";
-import book4 from "../assets/book4.png";
-import book5 from "../assets/book5.png";
+import book1 from "../assets/book1.webp";
+import book2 from "../assets/book2.webp";
+import book3 from "../assets/book3.webp";
+import book4 from "../assets/book4.webp";
+import book5 from "../assets/book5.webp";
 
 const books = [
   {

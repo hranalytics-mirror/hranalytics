@@ -3,7 +3,11 @@ import { Brain, BarChart3, Users, TrendingUp } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="relative py-5 overflow-hidden">
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="relative py-5 overflow-hidden"
+    >
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-72 h-72 bg-pink-200/30 blur-3xl rounded-full" />
@@ -205,7 +209,7 @@ const About = () => {
                   border border-gray-100
                 "
               >
-                <Brain className="text-primary mb-3" />
+                <Brain aria-hidden="true" className="text-primary mb-3" />
 
                 <h4 className="font-bold text-darkBlue text-sm">
                   Practical Thinking
@@ -226,7 +230,7 @@ const About = () => {
                   border border-gray-100
                 "
               >
-                <BarChart3 className="text-secondary mb-3" />
+                <BarChart3 aria-hidden="true" className="text-secondary mb-3" />
 
                 <h4 className="font-bold text-darkBlue text-sm">
                   Clear Metrics
@@ -247,7 +251,7 @@ const About = () => {
                   border border-gray-100
                 "
               >
-                <Users className="text-green-600 mb-3" />
+                <Users aria-hidden="true" className="text-green-600 mb-3" />
 
                 <h4 className="font-bold text-darkBlue text-sm">
                   People Stories
@@ -268,7 +272,10 @@ const About = () => {
                   border border-gray-100
                 "
               >
-                <TrendingUp className="text-yellow-500 mb-3" />
+                <TrendingUp
+                  aria-hidden="true"
+                  className="text-yellow-500 mb-3"
+                />
 
                 <h4 className="font-bold text-darkBlue text-sm">
                   Strategic Growth

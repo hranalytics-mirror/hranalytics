@@ -9,9 +9,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import reviewBg from "../assets/review_background.png";
-import topComma from "../assets/top_comma.png";
-import downComma from "../assets/down_comma.png";
+import reviewBg from "../assets/review_background.webp";
+import topComma from "../assets/top_comma.webp";
+import downComma from "../assets/down_comma.webp";
 
 const reviews = [
   {

@@ -10,7 +10,7 @@ import ziffyIcon from "../assets/ziffy.svg";
 
 import { ShoppingCart } from "lucide-react";
 import { ArrowLeft } from "lucide-react";
-
+import { Helmet } from "react-helmet-async";
 const fadeUp = {
   hidden: {
     opacity: 0,
@@ -36,14 +36,20 @@ const BookDetailsPage = () => {
   }
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#f7f8fc]">
-      {/* HERO */}
-      <section className="mx-auto max-w-7xl px-4 py-10 md:px-8 md:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="
+    <>
+      <Helmet>
+        <title>{book.title} - HR Analytics Mirror</title>
+
+        <meta name="description" content={book.description} />
+      </Helmet>
+      <div className="min-h-screen overflow-hidden bg-[#f7f8fc]">
+        {/* HERO */}
+        <section className="mx-auto max-w-7xl px-4 py-10 md:px-8 md:py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="
             overflow-hidden
             rounded-[32px]
             border
@@ -51,65 +57,65 @@ const BookDetailsPage = () => {
             bg-white
             shadow-sm
           "
-        >
-          <div className="pt-2 px-6">
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition"
-            >
-              <ArrowLeft size={18} />
-              Back to Home
-            </Link>
-          </div>
-          <div className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-2">
-            {/* LEFT */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.88 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
-              className="flex justify-center"
-            >
-              <motion.img
-                animate={{
-                  y: [0, -8, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                whileHover={{
-                  scale: 1.04,
-                  rotate: -2,
-                }}
-                src={book.cover}
-                alt={book.title}
-                className="
+          >
+            <div className="pt-2 px-6">
+              <Link
+                to="/"
+                className="flex items-center gap-2 text-sm font-medium hover:text-primary transition"
+              >
+                <ArrowLeft size={18} />
+                Back to Home
+              </Link>
+            </div>
+            <div className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-2">
+              {/* LEFT */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.88 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="flex justify-center"
+              >
+                <motion.img
+                  animate={{
+                    y: [0, -8, 0],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  whileHover={{
+                    scale: 1.04,
+                    rotate: -2,
+                  }}
+                  src={book.cover}
+                  alt={book.title}
+                  className="
                   w-[260px]
                   object-contain
                   drop-shadow-2xl
                   md:w-[360px]
                 "
-              />
-            </motion.div>
+                />
+              </motion.div>
 
-            {/* RIGHT */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={{
-                visible: {
-                  transition: {
-                    staggerChildren: 0.12,
-                  },
-                },
-              }}
-            >
+              {/* RIGHT */}
               <motion.div
-                variants={fadeUp}
-                transition={{ duration: 0.5 }}
-                whileHover={{ scale: 1.03 }}
-                className="
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.12,
+                    },
+                  },
+                }}
+              >
+                <motion.div
+                  variants={fadeUp}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{ scale: 1.03 }}
+                  className="
                   inline-flex
                   rounded-full
                   bg-pink-100
@@ -119,14 +125,14 @@ const BookDetailsPage = () => {
                   font-semibold
                   text-pink-600
                 "
-              >
-                HR Mirror 500 Series
-              </motion.div>
+                >
+                  HR Mirror 500 Series
+                </motion.div>
 
-              <motion.h1
-                variants={fadeUp}
-                transition={{ duration: 0.6 }}
-                className="
+                <motion.h1
+                  variants={fadeUp}
+                  transition={{ duration: 0.6 }}
+                  className="
                   mt-5
                   text-3xl
                   font-black
@@ -134,32 +140,32 @@ const BookDetailsPage = () => {
                   text-[#101828]
                   md:text-5xl
                 "
-              >
-                {book.title}
-              </motion.h1>
+                >
+                  {book.title}
+                </motion.h1>
 
-              {/* BUY LINKS */}
-              <motion.div
-                variants={fadeUp}
-                transition={{ duration: 0.7 }}
-                className="mt-10"
-              >
-                <button className="mb-5 text-xl font-bold text-white bg-gradient-to-br from-primary via-blue-600 to-blue-700 w-[200px] rounded-lg h-[40px]">
-                  Buy This Book
-                </button>
+                {/* BUY LINKS */}
+                <motion.div
+                  variants={fadeUp}
+                  transition={{ duration: 0.7 }}
+                  className="mt-10"
+                >
+                  <button className="mb-5 text-xl font-bold text-white bg-gradient-to-br from-primary via-blue-600 to-blue-700 w-[200px] rounded-lg h-[40px]">
+                    Buy This Book
+                  </button>
 
-                <div className="grid gap-4 sm:grid-cols-3">
-                  {/* AMAZON */}
-                  <motion.a
-                    whileHover={{
-                      scale: 1.03,
-                      y: -4,
-                    }}
-                    whileTap={{ scale: 0.96 }}
-                    href={book.amazonLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    {/* AMAZON */}
+                    <motion.a
+                      whileHover={{
+                        scale: 1.03,
+                        y: -4,
+                      }}
+                      whileTap={{ scale: 0.96 }}
+                      href={book.amazonLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="
                       flex
                       items-center
                       justify-between
@@ -169,27 +175,27 @@ const BookDetailsPage = () => {
                       p-5
                       transition
                     "
-                  >
-                    <img
-                      src={amazonIcon}
-                      alt="Amazon"
-                      className="h-7 object-contain"
-                    />
+                    >
+                      <img
+                        src={amazonIcon}
+                        alt="Amazon"
+                        className="h-7 object-contain"
+                      />
 
-                    <ShoppingCart size={18} className="text-yellow-400" />
-                  </motion.a>
+                      <ShoppingCart size={18} className="text-yellow-400" />
+                    </motion.a>
 
-                  {/* KINDLE */}
-                  <motion.a
-                    whileHover={{
-                      scale: 1.03,
-                      y: -4,
-                    }}
-                    whileTap={{ scale: 0.96 }}
-                    href={book.kindleLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
+                    {/* KINDLE */}
+                    <motion.a
+                      whileHover={{
+                        scale: 1.03,
+                        y: -4,
+                      }}
+                      whileTap={{ scale: 0.96 }}
+                      href={book.kindleLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="
                       flex
                       items-center
                       justify-between
@@ -200,27 +206,27 @@ const BookDetailsPage = () => {
                       p-5
                       transition
                     "
-                  >
-                    <img
-                      src={kindeIcon}
-                      alt="Kindle"
-                      className="h-7 object-contain"
-                    />
+                    >
+                      <img
+                        src={kindeIcon}
+                        alt="Kindle"
+                        className="h-7 object-contain"
+                      />
 
-                    <ShoppingCart size={18} className="text-yellow-400" />
-                  </motion.a>
+                      <ShoppingCart size={18} className="text-yellow-400" />
+                    </motion.a>
 
-                  {/* ZIFFY */}
-                  <motion.a
-                    whileHover={{
-                      scale: 1.03,
-                      y: -4,
-                    }}
-                    whileTap={{ scale: 0.96 }}
-                    href={book.ziffyLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
+                    {/* ZIFFY */}
+                    <motion.a
+                      whileHover={{
+                        scale: 1.03,
+                        y: -4,
+                      }}
+                      whileTap={{ scale: 0.96 }}
+                      href={book.ziffyLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="
                       flex
                       items-center
                       justify-between
@@ -230,30 +236,30 @@ const BookDetailsPage = () => {
                       p-5
                       transition
                     "
-                  >
-                    <img
-                      src={ziffyIcon}
-                      alt="Ziffy"
-                      className="h-7 object-contain"
-                    />
+                    >
+                      <img
+                        src={ziffyIcon}
+                        alt="Ziffy"
+                        className="h-7 object-contain"
+                      />
 
-                    <ShoppingCart size={18} className="text-yellow-400" />
-                  </motion.a>
-                </div>
+                      <ShoppingCart size={18} className="text-yellow-400" />
+                    </motion.a>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+            </div>
+          </motion.div>
+        </section>
 
-      {/* DETAILS */}
-      <section className="mx-auto max-w-5xl px-4 pb-20 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="
+        {/* DETAILS */}
+        <section className="mx-auto max-w-5xl px-4 pb-20 md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="
             rounded-[32px]
             border
             border-gray-100
@@ -262,27 +268,29 @@ const BookDetailsPage = () => {
             shadow-sm
             md:p-10
           "
-        >
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="mb-8 flex items-center gap-4"
           >
-            <div className="h-[2px] flex-1 bg-gray-100" />
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-8 flex items-center gap-4"
+            >
+              <div className="h-[2px] flex-1 bg-gray-100" />
 
-            <h2 className="text-3xl font-black text-[#101828]">Book Details</h2>
+              <h2 className="text-3xl font-black text-[#101828]">
+                Book Details
+              </h2>
 
-            <div className="h-[2px] flex-1 bg-gray-100" />
-          </motion.div>
+              <div className="h-[2px] flex-1 bg-gray-100" />
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="
               prose
               prose-lg
               max-w-none
@@ -298,13 +306,14 @@ const BookDetailsPage = () => {
 
               prose-strong:text-[#101828]
             "
-            dangerouslySetInnerHTML={{
-              __html: book.description,
-            }}
-          />
-        </motion.div>
-      </section>
-    </div>
+              dangerouslySetInnerHTML={{
+                __html: book.description,
+              }}
+            />
+          </motion.div>
+        </section>
+      </div>
+    </>
   );
 };
 
