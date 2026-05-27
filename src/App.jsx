@@ -6,12 +6,14 @@ import BookDetails from "./pages/BookDetails";
 import Author from "./pages/Author";
 import Layout from "./layout/Layout";
 import CommingSoon from "./pages/CommingSoon";
+import Books from "./pages/Books";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/books" element={<Books />} />
         <Route path="/comingsoon" element={<CommingSoon />} />
         <Route path="/book/:id" element={<BookDetails />} />
         <Route path="/author" element={<Author />} />

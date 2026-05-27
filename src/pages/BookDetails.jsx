@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import books from "../utils/books.js";
 
@@ -26,6 +26,7 @@ const BookDetailsPage = () => {
   const { id } = useParams();
 
   const book = books.find((b) => b.id === Number(id));
+  const navigate = useNavigate();
 
   if (!book) {
     return (
@@ -49,7 +50,7 @@ const BookDetailsPage = () => {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="
+            className=" 
             overflow-hidden
             rounded-[32px]
             border
@@ -59,13 +60,13 @@ const BookDetailsPage = () => {
           "
           >
             <div className="pt-2 px-6">
-              <Link
-                to="/"
+              <button
+                onClick={() => navigate(-1)}
                 className="flex items-center gap-2 text-sm font-medium hover:text-primary transition"
               >
                 <ArrowLeft size={18} />
-                Back to Home
-              </Link>
+                Back
+              </button>
             </div>
             <div className="grid items-center gap-10 p-6 md:p-10 lg:grid-cols-2">
               {/* LEFT */}

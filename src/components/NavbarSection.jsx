@@ -80,7 +80,7 @@ const NavbarSection = () => {
           <div className="hidden space-x-6 lg:flex lg:items-center">
             {[
               { label: "Home", link: "/", isRoute: true },
-              { label: "Books", link: "#books" },
+              { label: "Books", link: "/books", isRoute: true },
               {
                 label: "Tools & Assessments",
                 link: "#assessments",
@@ -278,7 +278,7 @@ const NavbarSection = () => {
               >
                 {[
                   { label: "Home", link: "/", isRoute: true },
-                  { label: "Books", link: "#books" },
+                  { label: "Books", link: "/books", isRoute: true },
                   {
                     label: "Tools & Assessments",
                     link: "#assessments",
