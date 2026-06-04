@@ -101,11 +101,11 @@ const books = [
 
     cover: book3,
 
-    amazonLink: "",
+    amazonLink: "https://www.amazon.in/dp/9375008878",
 
-    kindleLink: "",
+    kindleLink: "https://www.amazon.in/dp/B0H3VNSJP7/ref=tmm_kin_swatch_0",
 
-    ziffyLink: "",
+    ziffyLink: "https://www.ziffybees.com/product/hr-mirror-500-volume-3/",
 
     description: `
 
